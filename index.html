@@ -1,17 +1,383 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-  <meta content="text/html; charset=ISO-8859-1"
- http-equiv="content-type">
-</head>
-<body>
-<table border="0" width="100%">
-  <tbody>
-    <img src="iva.png" alt="cover"
-      width = "20%"; >
-  
-</tbody>
-</table>
+<head><title>Ideals, Varieties, and Algorithms</title></head>
+
+
+<h1>
+<img src="iva.jpg "WIDTH="250" HEIGHT="400" align = right alt = "cover of book">
+<i>Ideals, Varieties, and Algorithms</i><br>
+Fifth Edition, 2025<br>
+<a href="http://www.springer.com/us"> Springer</a><br>
+</h1>
+
+<h2>
+<i>by</i><br>
+</h2>
+
+<h2>
+<a href="http://dacox.people.amherst.edu/">David A. Cox,</a><br>
+Amherst College<br>
+<a href="http://math.holycross.edu/~little/homepage.html"> John
+B. Little,</a> <br>
+College of the Holy Cross<br> 
+<a href="http://www.mtholyoke.edu/directory/emeriti-retired-faculty/donal-oshea/">Don O'Shea,</a> <br>
+Mount Holyoke College<br> 
+</h2>
+
+<hr size=5>
+
+<h3> Contents of Web Page:</h3>
+<ul>
+<li> <a href="#TC"> What's in the Book</a>
+<!--<li> <a href="#CP"> Computer Packages</a>-->
+<li> <a href="#TE"> Typographical Errors</a>
+<li> <a href="#SE"> Solutions to Selected Exercises</a>
+<!--<li> <a href="#MR5"> Note to Maple Users</a>-->
+<li> <a href="#CAP"> Computer Algebra Programs</a>
+<li> <a href="#2ed"> Remarks on Earliers Editions of IVA</a>
+<li> <a href="#UAG"> Using Algebraic Geometry</a>
+<li> <a href="#CS"> Contacting Springer-Verlag</a>
+  <li> <a href="#CA"> Contacting the Authors</a>
+   <li> <a href="#BM"> IVA Board Members</a>
+</ul>
+<br clear=all>
+
+<hr size=5>
+
+<h2> <a name="TC"> What's in the Book </a> </h2>
+
+<p> This book is an introduction to computational algebraic geometry
+and commutative algebra at the undergraduate level.  It discusses
+systems of polynomial equations ("ideals"), their solutions
+("varieties"), and how these objects can be manipulated
+("algorithms").  </p>
+
+<p> In 2016, <i>
+Ideals, Varieties, and Algorithms</i> was awarded the <a href="http://www.ams.org/publications/journals/notices/201604/rnoti-p417.pdf"> Leroy P. Steele Prize for Mathematical Exposition</a> by the American Mathematical Society.  The article <a href="http://www.ams.org/publications/journals/notices/201606/rnoti-p626.pdf"> <i>The Story of Ideals, Varieties, and Algorithms</i></a> tells how the book came to be written.
+
+<hr size=5>
+
+<!--
+<h2> <a name="CP"> Computer Packages </a> </h2>
+
+<p> On pages 522 and 524 of the third edition (= pages 510 and 512 of
+the second edition), Appendix C mentions computer packages for
+Maple and Mathematica.  The packages were written for teaching
+purposes and tend to be very slow.  Thus you can use them only on very
+simple problems.  
+</p>
+
+<p> For Releases 2, 3 and 4 of Maple V, the following versions of the
+Maple package are available: 
+<ul>
+<li> <a href="iva/grobnerR2.sub"> <b> Maple Package for Release 2 of
+Maple V</b></a>
+<li> <a href="iva/grobnerR3.sub"> <b> Maple Package for Release 3 of
+Maple V</b></a> <br> 
+<li> <a href="iva/grobnerR4.sub"> <b> Maple Package for Release 4 of
+Maple V</b></a>
+</ul>
+The main commands in the Maple package are <b>div_alg</b>, which computes
+quotients and remainders in the division algorithm, and <b>mxgb</b>,
+which computes a Gr&ouml;bner basis together with a matrix showing how
+to express the Gr&ouml;bner basis in terms of the original basis.
+</p>
+
+<p> For Release 5 of Maple V, an expanded version of the Maple package
+is available.  This version includes commands for computing
+Gr&ouml;bner bases which give intermediate steps as well as tutorial
+and reference worksheets.  The files involved are:
+<ul>
+<li> <a href="iva/gbr5.mpl"> <b> Maple Package for Release 5 of Maple
+V </b></a>
+<li> <a href="iva/gbr5.mws"> <b> Tutorial Worksheet for the Maple Package
+</b></a>
+<li> <a href="iva/gbr5hlp.mws"> <b> Reference Worksheet for the Maple
+Package </b></a>
+</ul>
+The Maple package can be used without either of the worksheets.  The
+tutorial and reference worksheets, on the other hand, require that you
+also download the package.  The tutorial worksheet discusses the
+various commands in the package and gives examples of how they work,
+while the reference worksheet gives the precise syntax of each command
+in the package.  
+</p>
+
+<p> <b> WARNING:</b> The IVA Maple package for Release 5 of Maple V is
+<b>incompatible</b> with Maple 6 and Maple 7.  For Maple 6 and 7, you
+should download the following files:
+<ul>
+<li> <a href="iva/gbm6.mpl"> <b> Maple Package for Maple 6 and 7
+</b></a>
+<li> <a href="iva/gbm6.mws"> <b> Tutorial Worksheet for the Maple Package
+</b></a>
+<li> <a href="iva/gbm6hlp.mws"> <b> Reference Worksheet for the Maple
+Package </b></a>
+</ul>
+As far as we know, these work with more recent releases of Maple,
+including Maple 9 and 10.
+</p>
+
+<p> For Mathematica, the following versions of the Mathematica package
+are available:
+<ul>
+<li> <a href="iva/groebner40.m"><b> Mathematica Package for Mathematica
+4</b></a> <br> 
+<li> <a href="iva/groebner40.nb"><b> Mathematica Notebook for Mathematica
+4</b></a> <br> 
+<li> <a href="iva/groebner50.m"><b> Mathematica Package for Mathematica
+5</b></a> <br> 
+<li> <a href="iva/groebner50.nb"><b> Mathematica Notebook for Mathematica
+5</b></a> <br>
+<li> <a href="iva/groebner60.m"><b> Mathematica Package for Mathematica
+6</b></a> <br> 
+<li> <a href="iva/groebner60.nb"><b> Mathematica Notebook for Mathematica
+6</b></a> <br> 
+</ul>
+<b> WARNING:</b> The Mathematica 5 versions of the Package and Notebook
+<i> do not </i> work with Mathematica 6. 
+</p>
+
+<p>
+When using these Mathematica packages and notebooks, the following
+should be kept in mind:
+<ul>
+<li> The Mathematica package is <i> not </i> a notebook.  It needs to
+be loaded using &lt;&lt;.  
+<li> The Mathematica notebook is a tutorial explaining how to use the
+package.  In order to use the tutorial, you must also download the
+package.  The tutorial is <b>not</b> compatible with the 2.0 version
+of the package.  
+<li> The RadicalQ command in the package does not work in the 2.0
+version.  
+<li> The 3.0 and 4.0 versions of the package are faster than the 2.0
+version (and RadicalQ works).  The 3.0, 4.0 and 5.0 versions can also use
+matrix and elimination orders and include several commands for
+zero-dimensional ideals not present in the 2.0 version.
+</ul>
+
+<p>
+In general, if you have difficulties with either of the packages or
+suggestions for improvements, please let us know!  (Thanks to David
+Vella and his students at Skidmore for the information that the 4.0
+version of the package doesn't work with Mathematica 5.0.  They also
+suggested the solution implemented in the 5.0 version of the package.)
+</p>
+
+<hr size=5>
+-->
+
+<h2> <a name="TE"> Typographical Errors </a></h2>
+
+<h3>Fifth Edition</h3>
+
+<p> The fifth edition was originally published August 8th, 2025.
+
+<h3>Fourth Edition</h3>
+
+<p> The fourth edition was originally published in 2015. A corrected 
+publication appeared in 2018.  
+<ul>
+<li> Typos known as of August 2016 are available in <a
+href="iva/4ed.pdf"> pdf </a>. These typos were corrected in the 2018 
+publication.
+<li> Typos in the 2018 corrected publication are available in <a href="iva/4ed.corr2024.pdf"> pdf </a>.  These typos also appear in the version published in 2015.
+</ul>
+You can determine which version of the fourth edition you have by looking 
+for "corrected publication 2018" on the copyright page.
+
+<h3> Third Edition</h3>
+
+<p> Lists of typographical errors are available for the third
+edition. There are two lists, depending on which printing you have. Because of the fourth edition, the typo list for the third edition is no longer being updated. </p>
+
+<ul>
+<li> Typos in the first printing corrected in the second printing: <a
+href="iva/3ed1.pdf"> pdf </a> or <a
+href="iva/3ed1.ps"> postscript </a>.
+<li> Typos present in the first and second printings: <a
+href="iva/3ed2.pdf"> pdf </a> or <a
+href="iva/3ed2.ps"> postscript </a>.</ul>
+
+<p> To find out which printing you have, check the second line from
+the bottom on the copyright page; the last digit displayed is the
+printing number.  If you have the first printing, you will need to
+download both lists; if you have the second printing, you only need
+the second.</p>
+
+<h3> Second Edition</h3>
+
+<p> Lists of typographical errors are available for the second
+edition.   Because of the fourth edition, the typo list for the second 
+edition is no longer being updated. </p>
+
+<ul>
+<li> Typos for the first printing: <a
+href="iva/2ed1.pdf"> pdf </a> or <a
+href="iva/2ed1.ps"> postscript </a>.
+<li> Typos for the second, third and fourth printings: <a
+href="iva/2ed2.pdf"> pdf </a> or <a
+href="iva/2ed2.ps"> postscript </a>.
+</ul>
+
+<p> There is a separate list for each printing.  To find out
+which printing you have, check the second line from the bottom on the
+copyright page; the last digit displayed is the printing number.</p>
+
+<h3> First Edition</h3>
+
+<p> Lists of typographical errors are also available for the first
+edition.  Because of the fourth edition, the typo list for the first edition is no longer being updated.  </p>
+
+<ul>
+<li> Typos for the first printing: <a
+href="iva/typos.first"> text file </a>.
+<li> Typos for the second printing: <a
+href="iva/typos.tex"> TeX source </a> or <a
+href="iva/typos.ps"> postscript </a>.
+<li> Typos for the third printing: <a
+href="iva/typos3.tex"> TeX source </a> or <a
+href="iva/typos3.ps"> postscript </a>.
+</ul>
+
+<p> There is a separate list for each printing.  To find out
+which printing you have, check the third line from the bottom on the
+copyright page; the last digit displayed is the printing number.</p>
+
+<hr size=5>
+
+<h2> <a name="SE">Solutions to Selected Exercises </a></h2>
+
+<p> A complete solutions manual for <i>Ideals, Varieties, and Algorithms</i> has been written up by David Cox and Ying Li of St. Francis University. </p>  
+
+<!--<p> Solutions to various exercises from the first four chapters have
+been written up by Fred Woodward under the direction of Michael Singer
+of North Carolina State University.  We are grateful to Fred and
+Michael for allowing us to use their solutions.  </p>
+
+<p> Solutions to selected exercises from the whole book have been
+written up by Hyeyoun Chung for a seminar supervised by Steven Kleiman
+of MIT.  We are grateful to Hyeyoun and Steve for allowing us to use
+their solutions.  </p>-->
+
+<p> The solutions are not posted here because having open access to the solutions would diminish the value of the text.  <i>Ideals, Varieties, and Algorithms</i> is a book where you learn by doing.  If you are
+teaching from <i>Ideals, Varieties, and Algorithms</i> or are studying
+the book on your own, you may obtain a pdf copy of the solutions by
+sending email to <a
+href="mailto:donalboshea@gmail.com">donalboshea@gmail.com</a>.  <!--When
+requesting a copy, please let us know whether you would prefer the
+solutions sent in a LaTeX file, a postscript
+file, or a pdf file.  Hardcopy is also available if for some reason
+the electronic versions aren't suitable.-->
+</p>
+
+<hr size=5>
+
+<h2> <a name="CAP">Computer Algebra Programs </a></h2>
+
+
+<p> The book describes the computer algebra systems
+<i>Maple</i>, <i>Mathematica</i> and <i>Sage</i> in some detail. <i>Maple</i> and <i>Mathematica</i> are commercial products, while  <a
+href="http://www.sagemath.org"><i>Sage</i></a> is freely available. at
+<ul>
+<li> <b> <a
+href="http://www.sagemath.org">Sage</a></b>
+</ul>
+In addition, here are some other computer algebra programs which can do
+Gr&ouml;bner basis calculations:
+<ul>
+<li> <b><a href = "https://Macaulay2.com"> Macaulay2</a></b>
+<li> <b><a href = "http://cocoa.dima.unige.it">CoCoA</a></b>
+<li> <b> <a
+href="http://magma.maths.usyd.edu.au/magma/">Magma</a></b> 
+<li> <b> <a
+href="http://www.singular.uni-kl.de/">Singular</a></b> 
+</ul>
+Of these, all are free except for Magma. </p>
+
+<hr size=5>
+
+<h2> <a name="2ed"> Remarks on Earlier Editions of IVA</h2>
+
+<ul>
+<li> Appendix C of first edition of IVA describes the
+  obsolete <b>grobner package</b> for Maple, 
+  while subsequent editions describe the 
+<b>Groebner package</b> now used in Maple. 
+<li> In the 5th printing of the second edition of IVA, a production
+error caused plus signs to appear as minus signs on many pages.  Hence
+the 5th printing of the second edition is defective.  
+<li> The first three editions of IVA mention the existence of computer
+  packages for Maple and Mathematica.  These packages are no longer
+  supported and are not available.
+<li>The earlier practice of paying $1 US for each new typographical
+  error has been discontinued, though we are always
+  grateful when 
+  readers notify the authors about errors they find in the book.  
+</ul>
+
+<hr size=5>
+
+
+<p>
+
+<a href="uag.html"> 
+<img src="uag/uag2.jpg" align = right height = 180 ismap></a>
+
+<h2> <a name="UAG"> Using Algebraic Geometry </a></h2>
+
+<p> Click <a href="uag.html"> here</a> for the web page for the
+book <i>Using Algebraic Geometry</i>.  This book is an
+introduction to Gr&ouml;bner bases and resultants, which are two of
+the main tools used in computational algebraic geometry and
+commutative algebra.  It also discusses local methods and syzygies,
+and gives applications to integer programming, polynomial splines and
+algebraic coding theory.  The second edition was published by
+Springer in the summer of 2005.  It is available in both
+hardcover and paperback.
+</p> 
+
+<br clear all>
+
+<hr size=5>
+
+<h2> <a name="CS"> Contacting Springer  </a></h2>
+
+<p> The <a
+href="http://www.springer.com/us/book/9783319167206">
+catalog entry </a> for <i> Ideals, Varieties, and Algorithms</i> in the
+Springer on-line catalog contains a brief description of the
+book and also includes ordering information.
+</p>
+
+<hr size=5>
+
+<h2> <a name="CA"> Contacting the Authors </a></h2>
+
+<p>
+You can contact the authors at the following email addresses:
+</p>
+<address><a href = "mailto:%64%61%63%6F%78%40%61%6D%68%65%72%73%74%2E%65%64%75">&#100;&#97;&#99;&#111;&#120;&#64;&#97;&#109;&#104;&#101;&#114;&#115;&#116;&#46;&#101;&#100;&#117;</a></address>
+<address><a href = "mailto:&#106;&#108;&#105;&#116;&#116;&#108;&#101;&#064;&#104;&#111;&#108;&#121;&#099;&#114;&#111;&#115;&#115;&#046;&#101;&#100;&#117">&#106;&#108;&#105;&#116;&#116;&#108;&#101;&#64;&#104;&#111;&#108;&#121;&#99;&#114;&#111;&#115;&#115;&#46;&#101;&#100;&#117;</a></address>
+
+
+<address><a href="mailto:%64%6F%6E%61%6C%62%6F%73%68%65%61%40%67%6D%61%69%6C%2E%63%6F%6D">&#100;&#111;&#110;&#97;&#108;&#98;&#111;&#115;&#104;&#101;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></address>
+
+
+<!--
+<address><a href = "mailto:%64%6F%73%68%65%61%40%6E%63%66%2E%65%64%75">&#100;&#111;&#115;&#104;&#101;&#097;&#064;&#110;&#099;&#102;&#046;&#101;&#100;&#117;</a></address>
+-->
+
+<!--<address><a href = -->
+<!--"mailto:%64%6F%73%68%65%61%40%6D%68%63%2E%6D%74%68%6F%6C%79%6F%6B%65%2E%65%64%75">&#x64;&#x6F;&#x73;&#x68;&#x65;&#x61;&#x40;&#x6D;&#x68;&#x63;&#x2E;&#x6D;&#x74;&#x68;&#x6F;&#x6C;&#x79;&#x6F;&#x6B;&#x65;&#x2E;&#x65;&#x64;&#x75;</a></address>-->
+<hr size=5>
+
+<h2> <a name="BM"> IVA Board Members </a></h2>
+<ul>
+  <li>Ying Li, St. Francis University </li>
+  <li>Jessica Sidman, Amherst College </li>
+  <li>Gabriel Sosa, Colgate University </li>
+  <li>Nora Youngs, Colby College</li>
+</ul>
 
 </body>
 </html>
